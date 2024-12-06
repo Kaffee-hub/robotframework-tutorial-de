@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.7 on linux)" generated="2024-12-06T09:30:37.060634" rpa="false" schemaversion="5">
+<suite id="s1" name="01 Ausfuehrung" source="/workspace/robotframework-tutorial-de/Beratertag/Testfaelle/01_Syntax/Teil_01/01_Ausfuehrung.robot">
+<test id="s1-t1" name="Ich moechte ausgefuehrt werden" line="15">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>message=\nAusfuehrung erfolgreich!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-06T09:30:37.089944" elapsed="0.000249"/>
+</kw>
+<status status="PASS" start="2024-12-06T09:30:37.089256" elapsed="0.001116"/>
+</test>
+<status status="PASS" start="2024-12-06T09:30:37.061728" elapsed="0.029019"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="01 Ausfuehrung">01 Ausfuehrung</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

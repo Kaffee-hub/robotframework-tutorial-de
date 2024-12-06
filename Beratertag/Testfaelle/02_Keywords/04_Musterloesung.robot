@@ -62,3 +62,10 @@ Ersetze ${suchwort} mit ${ersatzwort} in ${string}
     ...    search_for=${suchwort}
     ...    replace_with=${ersatzwort}
     Log To Console    ${string}
+
+Ersetze2 ${suchwort} mit ${ersatzwort} in ${string}
+    ${string}    Replace String
+    ...    string=${string}
+    ...    search_for=${suchwort}
+    ...    replace_with=${ersatzwort}
+    Log To Console    ${string}

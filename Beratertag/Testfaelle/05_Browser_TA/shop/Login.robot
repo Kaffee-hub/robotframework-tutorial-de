@@ -1,7 +1,7 @@
 *** Settings ***
-Library    Browser
+Library    Browser     enable_presenter_mode=true
 Test Setup    Öffne Website
-Test Teardown    Close Browser    ALL
+#Test Teardown    Close Browser    ALL
 
 *** Variables ***
 ${BASE_URL}            https://www.saucedemo.com/
@@ -23,7 +23,12 @@ ${LOGIN_BOX}         .login-box
 *** Test Cases ***
 Login mit gültigen Zugangsdaten
     [Documentation]    Überprüft, ob ein Benutzer sich mit gültigen Zugangsdaten anmelden kann.
-    No Operation
+    Type Text          ${USERNAME_INPUT}    ${VALID_USERNAME}
+    Type Text          ${PASSWORD_INPUT}    ${VALID_PASSWORD}
+    Click    ${LOGIN_BUTTON}
+    Sleep    3s
+    Get Element States    ${INVENTORY_LIST}     contains    visible
+    #Get Element States    ${ERROR_ELEMENT}     contains    visible
 
 Login mit ungültigen Zugangsdaten
     [Documentation]    Überprüft, ob ein Benutzer sich mit ungültigen Zugangsdaten nicht anmelden kann.

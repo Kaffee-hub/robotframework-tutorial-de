@@ -26,4 +26,4 @@ Ein Testfall der fehlschlaegt
     Should Be Equal    first=Imbus    second=Imbus
     Should Be Equal As Integers    first=4711    second=4711
     Should Be True    1==1
-    Should Contain    container=Imbus    item=bis
+    Should Contain    container=Imbis    item=bis

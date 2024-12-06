@@ -18,6 +18,11 @@ VAR-Syntax in Robotframework dient der Vereinheitlichung bei der Deklaration von
 
 3-Punkt Notation in Robotframework für Zeilenumbrüche in Dokumentation, Variables usw.
 
+
+*** Settings ***
+Library    Collections
+
+
 *** Variables ***
 ${SKALAR}=           Skalarvariablen sind ein einzelnes Objekt
 &{DICTIONARY}
@@ -26,7 +31,11 @@ ${SKALAR}=           Skalarvariablen sind ein einzelnes Objekt
 @{LIST}=
 ...        Apfel
 ...        Banane
+...        ${True}
 ...        Heidelbeere
+...        ${EMPTY}
+...        ${None}
+...        ${null}
 ...        Orange
 # Vordefinierte RFW-Variablen
 # ${EMPTY}
@@ -35,6 +44,7 @@ ${SKALAR}=           Skalarvariablen sind ein einzelnes Objekt
 
 *** Test Cases ***
 Gebe die Variablen aus
+    Append To List    ${LIST}    blabla
     Log To Console    message=\n${SKALAR}
     Log To Console    message=&{DICTIONARY}
     Log To Console    message=@{LIST}

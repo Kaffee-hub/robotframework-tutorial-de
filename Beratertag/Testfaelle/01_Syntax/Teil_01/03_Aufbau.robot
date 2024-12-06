@@ -32,7 +32,7 @@ ${MY_MESSAGE}=       Liebe Gruesse vom Keyword :p
 *** Test Cases ***
 Ich bin ein Testfall
     [Documentation]    Hier dokumentiert man einen Testfall
-    [Tags]    tag1    tag2
+    [Tags]    tag1    tag2    ${MY_MESSAGE}
     [Timeout]    10 s
     [Setup]    Log To Console    \nDas ist der Anfang
     # Benutzerdefiniertes Keyword
@@ -43,6 +43,7 @@ Ich bin ein Testfall
 *** Keywords ***
 Gruesse von einem Keyword
     [Documentation]    Keywords können auch dokumentiert werden
+    [Tags]    llalallm
     [Arguments]    ${MyArgument}
     # Built-In Keyword
     Log To Console    message=${MY_MESSAGE}

@@ -21,13 +21,35 @@
 
 *** Test Cases ***
 Loesung 1
-    No Operation
+    Log To Console    \n
+    Log To Console    ${dictionary['element_2']}
 
 Loesung 2
-    No Operation
+    Log To Console    \n
+    Log To Console    ${list[2]}
 
 Loesung 3
-    No Operation
+    Log To Console    \n
+    FOR  ${item}  IN  @{list}
+            Log To Console    message=${item}
+    END
 
 Loesung 4
-    No Operation
+    Log To Console    \n
+    FOR  ${item}  IN  @{list}
+        IF    '${item}' == 'Imbus'
+            Log To Console    message=${item}
+        END
+    END
+
+Loesung 5
+    Log To Console    \n
+    FOR  ${item}  IN  &{dictionary}
+        VAR    ${value}    ${item[1]}
+        IF    '${value}' == 'Kaffeebohnen'
+            Log To Console    message=${item}
+        END
+    END
+
+loesung 6
+    Log To Console    message=abc ${list[0]} xyz

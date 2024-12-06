@@ -6,3 +6,7 @@ Diese Datei soll verifizieren, dass du alles richtig initialisiert hast.
 *** Test Cases ***
 Pruefe ob Robotframework funktioniert
     Log To Console    message=\nfunktioniert!
+
+Was auch immer ihr wollt :-)
+    Log To Console   Meine Log-Nachricht
+    Log To Console   Meine zweite Log-Nachricht
